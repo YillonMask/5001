@@ -5,8 +5,8 @@
 """
 
 
-def name():
-    # Comment:
+def name(x):
+    # this function
 
 
 def main():
