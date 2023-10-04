@@ -5,7 +5,7 @@
 """
 
 
-def name(x):
+def name():
     # this function
 
 

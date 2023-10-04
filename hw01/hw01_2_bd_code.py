@@ -5,10 +5,6 @@
 """
 
 
-def name(x):
-    # this function
-    pass
-
 def main():
     current_year = 2023
     user_name = input("Welcome! What is your name?")
@@ -16,6 +12,7 @@ def main():
     user_age = int(input("How old are you?"))
     user_birth = current_year - user_age
     print("I guess you were born in ", user_birth, ".", sep='')
+
 
 if __name__ == '__main__':
     main()
