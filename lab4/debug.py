@@ -15,7 +15,9 @@ def main():
     lo = int(input("Enter smaller: "))
     while lo > hi:
         lo = int(input("Enter smaller: "))
-    print('hi, lo')
+    while hi >= lo:
+        print(hi)
+        hi = hi - 1    
 
 
 if __name__ == '__main__':
