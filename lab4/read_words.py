@@ -7,17 +7,21 @@
 
 def read_words():
     # this function prompts user to input words and read in from keyboard
-    # until 'stop' is entered. After it is done, it prints all words in single line
+    # until 'stop' is entered.
+    # After it is done, it prints all words in single line
     x = input('Enter a word: ')
-    
+    return x
 
 
 def main():
+    words = []
     while True:
         x = read_words()
         if x == 'stop':
             break
-    print()
+        words.append(x)
+    results = ' '.join(words)
+    print(results)
 
 
 if __name__ == '__main__':

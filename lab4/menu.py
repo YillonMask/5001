@@ -7,19 +7,26 @@
 
 def menu():
     print('0 -- Quit\n'
-          '1 -- Add "0"\n'
+          '1 -- Add "O"\n'
           '2 -- Add "oo"\n'
-          '3 -- Add "xXx"' )
-    choice = input("Option: ")
-    return choice
+          '3 -- Add "xXx"')
 
 
 def main():
+    options = ["O", "oo", "xXx"]
+    selected_options = []
     while True:
-        option = menu()
-        if option == '0':
+        menu()
+        choice = input("Option: ")
+        if choice == '0':
             break
-    print('thx',option)
+        elif choice in ['1', '2', '3']:
+            option_index = int(choice) - 1
+            selected_options.append(options[option_index])
+        else:
+            print('Invalid option')
+    results = ''.join(selected_options)
+    print('Result:', results)
 
 
 if __name__ == '__main__':
