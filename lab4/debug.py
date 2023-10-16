@@ -11,11 +11,13 @@ def name():
 
 
 def main():
-    hi = int(input("Enter larger: "))
+    hi = int(input("Enter larger: "))      
     lo = int(input("Enter smaller: "))
     while lo > hi:
         lo = int(input("Enter smaller: "))
-    print(hi, lo, sep='')
+    while hi >= lo:
+        print(hi)
+        hi = hi - 1    
 
 
 if __name__ == '__main__':
