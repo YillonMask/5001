@@ -6,8 +6,8 @@
 
 
 def convert_tuple(my_tuple):
-    # this function takes a tuple and
-    # returns a string contains all of the same elements in same order
+    # this function takes a tuple as a parameter and returns a list
+    # the list contains all of the same elements
     return list(my_tuple)
 
 
