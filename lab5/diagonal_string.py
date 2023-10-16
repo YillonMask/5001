@@ -7,12 +7,12 @@
 
 def diagonal_string(word):
     # this function takes a string and returns each letter diagonally
-    index = 0
-    while index < len(word):
-        space = index * ' '
-        print(space + word[index])
-        index = index + 1
-        space = index
+    result = ""
+    for i, char in enumerate(word):
+        result += " " * i + char
+        if i != len(word) - 1:
+            result += '\n'
+    return result
 
 
 def main():
