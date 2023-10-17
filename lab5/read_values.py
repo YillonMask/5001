@@ -8,17 +8,17 @@
 def main():
     # this function
     result = read_value()
-    return result
+    print(result)
 
 
-def read_value():
-    values = list()
+def read_values():
+    values = []
     while True:
         num = int(input("Enter a number: "))
         if num <= 0:
             break
         values.append(int(num))
-    print(values)
+    return values
 
 
 if __name__ == '__main__':

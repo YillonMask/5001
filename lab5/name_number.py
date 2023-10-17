@@ -8,6 +8,7 @@
 def name_number(name):
     # this function calculate the name number of a given name
     count = 0
+    name = name.lower()
     for char in name:
         index = ord(char) - ord('a') + 1
         count += index
