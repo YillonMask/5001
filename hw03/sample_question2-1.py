@@ -96,16 +96,21 @@ def main():
         # Replace this inline comment, and the pass statement, with your code
         if sides == 0:
             done = True
-        start_x = float(input("starting position x coordinate: "))
-        start_y = float(input("starting position y coordinate: "))
+        else:
+            start_x = float(input("starting position x coordinate: "))
+            start_y = float(input("starting position y coordinate: "))
+            while (start_x > MAX_X or start_x < MIN_X or start_y > MAX_Y or
+            start_y < MIN_Y):
+                start_x = float(input("starting position x coordinate: "))
+                start_y = float(input("starting position y coordinate: "))    
         # how to make sure the drawings are within bounds
-        color = input("Enter a color you want: ")
-        if color == "random":
-            index = random(0,6)
-            color = COLORS[index]
-        start_hdg = float(input("Initial heading of turtle: "))
-        size = float(input("Length of each side: "))
-        poly(sides, start_x, start_y, start_hdg, size, color)
+            color = input("Enter a color you want: ")
+            if color == "random":
+                index = choice(list(range(len(COLORS))))
+                color = COLORS[index]
+            start_hdg = float(input("Initial heading of turtle: "))
+            size = float(input("Length of each side: "))
+            return poly(sides, start_x, start_y, start_hdg, size, color)
         
 
 

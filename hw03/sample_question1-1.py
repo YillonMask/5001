@@ -57,10 +57,32 @@ def sentences(prompt):
         (['ODD', 'AND', 'FRUIT', 'FLIES', 'LIKE', 'A', 'BANANA'], 7)
     """
 
-    # Your code should replace this comment and the following pass statement
-    PUNCTUATION = ".,!?-:;\t\n()[]{}@#\\$%^*-_+= /'\"|~<>"
-    my_list = 
+
+    # strip all the PUNCTUATION char from the input to a new string 
+    #prompt = prompt.strip(PUNCTUATION)
+    print(prompt)
+    #conver the letter to upper case
+    upper_prompt = prompt.upper()
+    #remove all the punctuation char from previous string
+    clean_word = upper_prompt
+    for char in PUNCTUATION:
+        clean_word = clean_word.replace(char," ")
+    print(clean_word)
+    #split all the word by " " space delimiter into a list
+    result = clean_word.split()
+    print(result)
+    #return the result and length of the result into a tuple
+    my_tuple = (result, len(result))
+    print(my_tuple)
+
+
+def main():
+    prompt = input("Please enter a sentence:\n")
+    sentences(prompt)
+
+
+if __name__ == '__main__':
+    main()
+
     
-    for puctuation 
-    
-    pass
+
