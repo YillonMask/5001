@@ -11,11 +11,10 @@ def name():
 
 
 def main():
-    number = int(input('Enter a positive integer:'))
-    for i in range(5, number+1,5):
+    number = int(input('Enter a positive integer: '))
+    for i in range(5, number + 1, 5):
         print(i)
 
 
 if __name__ == '__main__':
     main()
-

@@ -7,7 +7,7 @@
 
 def count_down():
     # this function count down from 100 to 1 and print blast
-    for i in range(100, 0, -1):
+    for i in range(100, 0, -5):
         print(i)
     print("Blastoff!")
 
@@ -18,4 +18,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
