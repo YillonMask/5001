@@ -74,6 +74,9 @@ def poly(sides, start_x, start_y, start_hdg, size, color):
         forward(size)
         right(360/sides)
     end_fill()
+    exitonclick() 
+    print("A list of arguments provided by the caller:","\n",
+          [sides, start_x, start_y, start_hdg, size, color])
 
 
 def main():
@@ -93,17 +96,16 @@ def main():
     done = False
     while not done:
         sides = int(input("How many sides for your polygon (0 to quit): "))
-        # Replace this inline comment, and the pass statement, with your code
         if sides == 0:
             done = True
         else:
             start_x = float(input("starting position x coordinate: "))
             start_y = float(input("starting position y coordinate: "))
+            # make sure the drawings are within bounds
             while (start_x > MAX_X or start_x < MIN_X or start_y > MAX_Y or
             start_y < MIN_Y):
                 start_x = float(input("starting position x coordinate: "))
-                start_y = float(input("starting position y coordinate: "))    
-        # how to make sure the drawings are within bounds
+                start_y = float(input("starting position y coordinate: "))
             color = input("Enter a color you want: ")
             if color == "random":
                 index = choice(list(range(len(COLORS))))
