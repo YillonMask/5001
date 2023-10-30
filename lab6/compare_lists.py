@@ -7,14 +7,18 @@
 
 def compare_lists(nums1, nums2):
     """
-        this function compare two given lists and return true if
-        elements in one list are in the other list
-        order does not matter
+        this function reveives two lists of integer values
+        return true if the elements in first list are contained
+        in second list
     """
-    
+    for num in nums1:
+        if num not in nums2:
+            return False
+    return True
 
 
 def main():
+    pass
 
 
 if __name__ == '__main__':
