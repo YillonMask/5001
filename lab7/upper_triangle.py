@@ -10,10 +10,11 @@ def upper_triangle(n):
         this function takes in number greater than or equal to 3
         and prints an upper left triangle of that size
     """
-    if n == 0:
-        print("*")
+    if n == 1:
+        return "*"
     else:
-        print(upper_triangle(n - 1))
+        print('*' * n)
+        return upper_triangle(n - 1)
 
 
 def main():
