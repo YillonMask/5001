@@ -7,14 +7,13 @@
 
 def upper_triangle(n):
     """
-        this function takes in number greater than or equal to 3
+        this function takes in number greater
+        than or equal to 3
         and prints an upper left triangle of that size
     """
-    if n == 1:
-        return "*"
-    else:
+    if n >= 1:
         print('*' * n)
-        return upper_triangle(n - 1)
+        upper_triangle(n - 1)
 
 
 def main():
