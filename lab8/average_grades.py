@@ -14,15 +14,27 @@ def average_grades(my_file):
     try:
         with open(my_file, 'r') as file:
             grades = file.readlines()
-            grades = [float(grades.strip()) for grade in grades 
-                      if grade.strip().isdigit()]
-            return sum(grades) / len(grades) if grades else None    
+            print(grades)
+            sum = 0.0
+            count = 0.0
+            for grade in grades:
+                sum += float(grade)
+                count += 1
+            return sum / count if count != 0 else 0.0
     except PermissionError:
         print(f"Permission denied for {my_file}")
-        return None
+        
     except OSError:
         print(f"Error occurred while reading {my_file}")
-        return None
+        
     except FileNotFoundError:
         print(f"File {my_file} was not found")
-        return None
+        
+
+
+def main():
+    average_grades("grades.txt")
+
+
+if __name__ == '__main__':
+    main()
