@@ -1,6 +1,6 @@
 """
     CS5001_5003 Fall 2023 SV
-    Lab07
+    Lab08
     Xinrui Yi
 """
 
@@ -16,8 +16,8 @@ def validation(a, b):
         raise ValueError("a should be negative.")
     if not isinstance(b, float):
         raise TypeError("b shoulde be a float.")
-    if b >= 10000 or b <= 0:
-        raise ValueError("b should be positive and less than 10000.")
+    if b >= 1000 or b <= 0:
+        raise ValueError("b should be positive and less than 1000.")
     result = a * b
     return result
 
