@@ -50,10 +50,10 @@ def morse_code(n):
             # duration of dits is 0.2s
             sleep(0.2)
             pico_sonar.duty_u16(0)
-            pico_led.value(0.2)
+            pico_led.value(0)
             # duration between each dit or dah within a encoded character
             # is equal to dit duration
-            sleep(1)
+            sleep(0.2)
         # for dahs
         elif digit == '-':
             pico_sonar.duty_u16(1000)
@@ -61,7 +61,7 @@ def morse_code(n):
             sleep(0.6)
             pico_sonar.duty_u16(0)
             pico_led.value(0)
-            sleep(0.6)
+            sleep(0.2)
         # each dit or dah within an encoded character is followed by
         # a period of signal absence called space, equal to the dit.
         else:
@@ -81,7 +81,7 @@ def alloff():
     # pico_led2.value(1)
     # pico_led3.value(0)
     # pico_led4.value(0)
-    pico_sonar.value(0)
+    pico_sonar.duty_u16(0)
 
 main()
 
