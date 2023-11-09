@@ -1,3 +1,4 @@
+
 """
     CS5001_5003 Fall 2023 SV
     Lab08
@@ -13,28 +14,20 @@ def average_grades(my_file):
     """
     try:
         with open(my_file, 'r') as file:
-            grades = file.readlines()
-            print(grades)
-            sum = 0.0
-            count = 0.0
-            for grade in grades:
-                sum += float(grade)
-                count += 1
-            return sum / count if count != 0 else 0.0
-    except PermissionError:
-        print(f"Permission denied for {my_file}")
-        
-    except OSError:
-        print(f"Error occurred while reading {my_file}")
-        
+            # read file
+            grades = []
+            for line in file:
+                line = line.strip()
+                if len(line) > 0:
+                    grades.append(float(line))
+            if len(grades) == 0:
+                return 0.0
+            else:
+                print(sum(grades) / len(grades))
+                return sum(grades) / len(grades)  
     except FileNotFoundError:
-        print(f"File {my_file} was not found")
-        
-
-
-def main():
-    average_grades("grades.txt")
-
-
-if __name__ == '__main__':
-    main()
+        print(f'File {my_file} was not found')
+    except PermissionError:
+        print(f'Permission denied for {my_file}')
+    except OSError:
+        print(f'Error occurred while reading {my_file}')
