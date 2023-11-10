@@ -7,9 +7,12 @@
 
 def initialize():
     """
-        this function creates and returns a dictionary that contains certain data
+        this function creates and returns a dictionary
+        that contains certain data
     """
-    my_dic = {'Maria' : 'Associate Professor', 'John' : 'Clinical Instructor', 'Carla': 'Dean of Khoury' }
+    my_dic = {'Maria': 'Associate Professor',
+              'John': 'Clinical Instructor',
+              'Carla': 'Dean of Khoury'}
     return my_dic
 
 
