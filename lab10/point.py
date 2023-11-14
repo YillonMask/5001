@@ -3,6 +3,7 @@
     Lab10
     Xinrui Yi
 """
+import math
 
 
 class Point:
@@ -21,21 +22,10 @@ class Point:
         self.origin = origin
 
 
-    def get_distance(self):
-        return self.first_name
-
-
-    def get_last_name(self):
-        return self.last_name
-
-
-    def get_full_name(self,last_name, first_name):
-        return self.last_name + self.first_name
-
-
-    def set_nick_name(self, nick_name):
-        self.nick_name = nick_name
-
-
-    def get_nick_name(self):
-        return self.nick_name
+    def get_distance(self, a = 0, b = 0, c = 0):
+        self.origin = (a, b, c)
+        x = self.x 
+        y = self.y
+        z = self.z
+        distance = math.sqrt((x - a)** 2 + (y - b)**2 + (c - z)**2)
+        return distance
