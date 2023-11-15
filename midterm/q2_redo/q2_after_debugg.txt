@@ -1,0 +1,1 @@
+xinruiyi@XinruideMac-mini ~ % /opt/homebrew/bin/python3 /Users/xinruiyi/Documents/GitHub/5001/midterm/q2_circles_original.pyThe area function failed 0 tests.The indianna area function failed 0 tests.xinruiyi@XinruideMac-mini ~ % 
