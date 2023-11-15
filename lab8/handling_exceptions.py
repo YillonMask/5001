@@ -25,7 +25,6 @@ def generate_random_error():
 
 
 def main():
-    done = False
     count = 0
     while count < 20:
         generate_random_error()
