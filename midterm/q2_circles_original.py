@@ -42,8 +42,7 @@ def indiana_area(radius):
     """
     global PI
     PI = 3.0
-    # following formula has been modified 
-    return PI * radius ** 2
+    return PI * radius * 2
 
 
 def test_area(radius, expected):
@@ -68,24 +67,22 @@ def main():
     """
     # The next 2 lines of code need a 3rd tuple of (radius, expected).
     area_tests = [(0, 0.0), (1, 3.141592653589793), (2, 12.566370614359172)]
-    indiana_area_tests = [(0, 0.0), (1, 3.0), (3, 36.0)]
-    print(area_tests[0],area_tests[1],area_tests[2])
-    #print(indiana_area(2))
-    #print(area_tests[2])
+    indiana_area_tests = [(0, 0.0), (1, 3.0), (2, 6.0)]
 
     # Run the list of test cases for the area function:
     failed = 0
     for test_pair in area_tests:
-        if not test_area[test_pair[0],test_pair[1], test_pair[2]] :
+        if not test_area(test_pair[0], test_pair[1]):
             failed += 1
     print("The area function failed", failed, "tests.")
 
     failed = 0
     # Now run the list of test cases for the indiana_area function:
     for test_pair in indiana_area_tests:
-        if not test_indiana_area[test_pair[0], test_pair[1]]:
+        if not test_indiana_area(test_pair[0], test_pair[1]):
             failed += 1
-    print("The area function failed", failed, "tests.")
+    print("The indianna area function failed", failed, "tests.")
+    print(indiana_area(3),area(3))
 
 
 if __name__ == '__main__':
