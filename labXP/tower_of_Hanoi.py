@@ -1,3 +1,10 @@
+"""
+CS5001_5003 Fall 2023 SV
+Lab XP
+Xinrui Yi
+"""
+
+
 from machine import Pin
 from time import sleep
 
@@ -13,152 +20,13 @@ led_C2 = Pin(7,Pin.OUT)
 led_C3 = Pin(8,Pin.OUT)
 
 
-
 def tower_of_hanoi(num_disks, from_rod, to_rod):
     '''
     function: tower_of_hanoi, the starting point for our program
     params:   num_disks to be moved
               from_rod, the starting rod for the disks
               to_rod, the target to move the disks to
-    '''
-    if from_rod == 1:
-        if num_disks == 1:
-            led_A1.value(1)
-            sleep(1)
-            led_A1.value(0)
-            sleep(1)
-        elif num_disks == 2:
-            led_A1.value(1)
-            led_A2.value(1)
-            sleep(1)
-            led_A1.value(0)
-            led_A2.value(0)
-            sleep(1)
-        else :
-            led_A1.value(1)
-            led_A2.value(1)
-            led_A3.value(1)
-            sleep(1)
-            led_A1.value(0)
-            led_A2.value(0)
-            led_A3.value(0)
-            sleep(1)
-    
-    if to_rod == 1:
-        if num_disks == 1:
-            led_A1.value(1)
-            sleep(1)
-            led_A1.value(0)
-            sleep(1)
-        elif num_disks == 2:
-            led_A1.value(1)
-            led_A2.value(1)
-            sleep(1)
-            led_A1.value(0)
-            led_A2.value(0)
-            sleep(1)
-        else :
-            led_A1.value(1)
-            led_A2.value(1)
-            led_A3.value(1)
-            sleep(1)
-            led_A1.value(0)
-            led_A2.value(0)
-            led_A3.value(0)
-            sleep(1)
-            
-    if to_rod == 3:
-        if num_disks == 1:
-            led_C1.value(1)
-            sleep(1)
-            led_C1.value(0)
-            sleep(1)
-        elif num_disks == 2:
-            led_C1.value(1)
-            led_C2.value(1)
-            sleep(1)
-            led_C1.value(0)
-            led_C2.value(0)
-            sleep(1)
-        else :
-            led_C1.value(1)
-            led_C2.value(1)
-            led_C3.value(1)
-            sleep(1)
-            led_C1.value(0)
-            led_C2.value(0)
-            led_C3.value(0)
-            sleep(1)
-    
-    if from_rod == 3:
-        if num_disks == 1:
-            led_C1.value(1)
-            sleep(1)
-            led_C1.value(0)
-            sleep(1)
-        elif num_disks == 2:
-            led_C1.value(1)
-            led_C2.value(1)
-            sleep(1)
-            led_C1.value(0)
-            led_C2.value(0)
-            sleep(1)
-        else :
-            led_C1.value(1)
-            led_C2.value(1)
-            led_C3.value(1)
-            sleep(1)
-            led_C1.value(0)
-            led_C2.value(0)
-            led_C3.value(0)
-            sleep(1)
-            
-    if to_rod == 2:
-        if num_disks == 1:
-            led_B1.value(1)
-            sleep(1)
-            led_B1.value(0)
-            sleep(1)
-        elif num_disks == 2:
-            led_B1.value(1)
-            led_B2.value(1)
-            sleep(1)
-            led_B1.value(0)
-            led_B2.value(0)
-            sleep(1)
-        else :
-            led_B1.value(1)
-            led_B2.value(1)
-            led_B3.value(1)
-            sleep(1)
-            led_B1.value(0)
-            led_B2.value(0)
-            led_B3.value(0)
-            sleep(1)
-    
-    if from_rod == 2:
-        if num_disks == 1:
-            led_B1.value(1)
-            sleep(1)
-            led_B1.value(0)
-            sleep(1)
-        elif num_disks == 2:
-            led_B1.value(1)
-            led_B2.value(1)
-            sleep(1)
-            led_B1.value(0)
-            led_B2.value(0)
-            sleep(1)
-        else :
-            led_B1.value(1)
-            led_B2.value(1)
-            led_B3.value(1)
-            sleep(1)
-            led_B1.value(0)
-            led_B2.value(0)
-            led_B3.value(0)
-            sleep(1)
-            
+    '''           
     move_stack(num_disks, from_rod, to_rod)
 
 

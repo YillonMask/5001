@@ -1,0 +1,13 @@
+def move_tower_of_hanoi(n, source, destination, auxiliary):
+    if n > 0:
+        # Move n-1 disks from source to auxiliary peg
+        move_tower_of_hanoi(n - 1, source, auxiliary, destination)
+
+        # Move the nth disk from source to destination peg
+        print(f"Move disk {n} from {source} to {destination}")
+
+        # Move the n-1 disks from auxiliary to destination peg
+        move_tower_of_hanoi(n - 1, auxiliary, destination, source)
+
+move_tower_of_hanoi(3, 'A', 'C', 'B')
+
