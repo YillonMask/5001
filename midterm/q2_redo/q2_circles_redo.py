@@ -40,9 +40,9 @@ def indiana_area(radius):
         Here, you must assume that Indiana was right about PI!
         Be careful though -- what is this function supposed to do?
     """
-    global PI
-    PI = 3.0
-    return PI * radius ** 2
+    # global PI
+    PI_new = 3.0
+    return PI_new * radius ** 2
 
 
 def test_area(radius, expected):
