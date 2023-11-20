@@ -11,20 +11,32 @@
 import json
 
 
-#def syntax_error():
-
+"""
+The following function shows a SyntaxError, which is that "(" was not close
+To fix this SyntaxError, we can close the parenthesis by adding ")" at the end of code
+def syntax_error():
+    print("Hello, World!    
+"""
 
 
 def type_error(my_set):
     # set
     if not isinstance(my_set, set):
-        raise TypeError(f'The file "{my_set}" is not set')
+        raise TypeError(f'The file "{my_set}" is not a set')
 
 
-##def value_error():
+def value_error(numbers, number_remove):
+    try:
+        numbers.remove(number_remove)
+    except:
+        raise ValueError(f'The element {number_remove} is not in list {numbers}')
 
 
-#def name_error():
+def name_error():
+    try:
+        print(my_undifined_variable)
+    except:
+        raise NameError(f'The name {my_undifined_vatiable} is not defined')
 
 
 def file_not_found_error(file_name):
@@ -39,6 +51,7 @@ def file_not_found_error(file_name):
 def index_error(my_list, index):
     try:
         num = my_list[index]
+        return num
     except IndexError:
         raise IndexError(f'The index "{index}" is out of range of list {my_list}')
 
@@ -58,8 +71,11 @@ def zero_division_error(a, b):
         return a / b
 
 
-#def attribute_error():
-
+def attribute_error(nums,append_num):
+    try:
+        nums.append(append_num)
+    except AttributeError:
+        raise AttributeError(f"The 'str' objects {nums}, does not have attribute 'append'.")
 
 #def import_error():
 
@@ -72,25 +88,41 @@ def main():
         my_set = [1, 2, 3]
         type_error(my_set)
     except TypeError as e:
-        print(e)
+        print("TypeError:",e)
     try:
         zero_division_error(1, 0)
     except ZeroDivisionError  as e:
-        print(e)
+        print("ZeroDivisionError:", e)
     try:
         file_not_found_error("my_dict")
     except FileNotFoundError as e:
-        print(e)
+        print("FileNotFoundError:", e)
     try:
         my_dict = {'a': 1, 'b': 2, 'c': 3}
         value = key_error(my_dict, 'd')
     except KeyError as e:
-        print(e)
+        print("KeyError:", e)
     try:
         my_list = [0, 1, 2]
         index_error(my_list, 3)
     except IndexError as e:
-        print(e)
+        print("IndexError:", e)
+    try:
+        numbers = [1, 2, 3]
+        numbers_remove = 4
+        value_error(numbers, numbers_remove)
+    except ValueError as e:
+        print("ValueError:", e)
+    try:
+        nums = '12345'
+        append_num = 6
+        attribute_error(nums,append_num)
+    except AttributeError as e:
+        print("AttributeError:", e)
+    try:
+        name_error()
+    except NameError as e:
+        print("NameError:", e)
 
 
 
