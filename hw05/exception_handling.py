@@ -9,6 +9,7 @@
     plus one other function containing a logical error (not an exception).
 """
 import json
+import os
 
 
 """
@@ -77,9 +78,30 @@ def attribute_error(nums,append_num):
     except AttributeError:
         raise AttributeError(f"The 'str' objects {nums}, does not have attribute 'append'.")
 
-#def import_error():
 
+def os_error(file_not_permit):
+    try:
+        with open(file_not_permit,'w') as file:
+            data = json.load(file)
+            return data
+    except OSError:
+        raise OSError(f'OSError occured when opens "{file_not_permit}".')
+    
 
+def import_error(my_module):
+    try:
+        import my_module
+    except ImportError:
+        raise ImportError(f'The module {my_module} does not exist')
+    
+
+def logic_error(nums):
+    result = 0
+    n = 0
+    while n < len(nums) - 1:
+        result += nums[n]
+        n += 1
+    return result
 
 
 
@@ -114,15 +136,30 @@ def main():
     except ValueError as e:
         print("ValueError:", e)
     try:
+        name_error()
+    except NameError as e:
+        print("NameError:", e)
+    try:
         nums = '12345'
         append_num = 6
         attribute_error(nums,append_num)
     except AttributeError as e:
         print("AttributeError:", e)
     try:
-        name_error()
-    except NameError as e:
-        print("NameError:", e)
+        os_error('somefile.txt')
+    except OSError as e:
+        print("OSError:", e)
+    try:
+        my_module = None
+        import_error(my_module)
+    except ImportError as e:
+        print("ImportError:", e)
+    logic_error_nums = [1, 2, 3, 4]
+    logic_error_sum = logic_error(logic_error_nums)
+    print(f'Logic Error: the actual sum is {sum(logic_error_nums)} but we got {logic_error_sum}')
+    
+
+    
 
 
 
