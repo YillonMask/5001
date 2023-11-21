@@ -2,21 +2,21 @@
     CS5001_5003 Fall 2023 SV
     HW5
     Xinrui Yi
-    This program will provide practice in exception handling, 
-    file input/output using JSON format, dictionaries, and sets. 
-    Specifically, create one function per type of error, 
-    including 10 different exceptions being raised, 
+    This program will provide practice in exception handling,
+    file input/output using JSON format, dictionaries, and sets.
+    Specifically, create one function per type of error,
+    including 10 different exceptions being raised,
     plus one other function containing a logical error (not an exception).
 """
 import json
-import os
 
 
 """
 The following function shows a SyntaxError, which is that "(" was not close
-To fix this SyntaxError, we can close the parenthesis by adding ")" at the end of code
+To fix this SyntaxError, we can close the parenthesis by adding ")"
+at the end of code
 def syntax_error():
-    print("Hello, World!    
+    print("Hello, World!
 """
 
 
@@ -30,24 +30,25 @@ def value_error(numbers, number_remove):
     try:
         numbers.remove(number_remove)
     except:
-        raise ValueError(f'The element {number_remove} is not in list {numbers}')
+        raise ValueError(f"The element {number_remove} is not in list {numbers}")
 
 
 def name_error():
     try:
         print(my_undifined_variable)
     except:
-        raise NameError(f'The name {my_undifined_vatiable} is not defined')
+        raise NameError(f"The name {my_undifined_variable} is not defined")
 
 
 def file_not_found_error(file_name):
     # read dictionary from .json file
     try:
-        with open(file_name,'r') as file:
+        with open(file_name, "r") as file:
             data = json.load(file)
             return data
     except FileNotFoundError:
         raise FileNotFoundError(f'The file "{file_name}" does not exist.')
+
 
 def index_error(my_list, index):
     try:
@@ -61,39 +62,42 @@ def key_error(my_dict, key):
     # dictionary
     try:
         value = my_dict[key]
+        return value
     except KeyError:
         raise KeyError(f"The key '{key}' does not exist in the dictionary {my_dict}")
 
 
 def zero_division_error(a, b):
     if b == 0:
-        raise ZeroDivisionError(f"The divisor 'b' cannot be zero")
+        raise ZeroDivisionError("The divisor 'b' cannot be zero")
     else:
         return a / b
 
 
-def attribute_error(nums,append_num):
+def attribute_error(nums, append_num):
     try:
         nums.append(append_num)
     except AttributeError:
-        raise AttributeError(f"The 'str' objects {nums}, does not have attribute 'append'.")
+        raise AttributeError(
+            f"The 'str' objects {nums}, does not have attribute 'append'."
+        )
 
 
 def os_error(file_not_permit):
     try:
-        with open(file_not_permit,'w') as file:
+        with open(file_not_permit, "w") as file:
             data = json.load(file)
             return data
     except OSError:
         raise OSError(f'OSError occured when opens "{file_not_permit}".')
-    
+
 
 def import_error(my_module):
     try:
         import my_module
     except ImportError:
-        raise ImportError(f'The module {my_module} does not exist')
-    
+        raise ImportError(f"The module {my_module} does not exist")
+
 
 def logic_error(nums):
     result = 0
@@ -104,24 +108,23 @@ def logic_error(nums):
     return result
 
 
-
 def main():
     try:
         my_set = [1, 2, 3]
         type_error(my_set)
     except TypeError as e:
-        print("TypeError:",e)
+        print("TypeError:", e)
     try:
         zero_division_error(1, 0)
-    except ZeroDivisionError  as e:
+    except ZeroDivisionError as e:
         print("ZeroDivisionError:", e)
     try:
         file_not_found_error("my_dict")
     except FileNotFoundError as e:
         print("FileNotFoundError:", e)
     try:
-        my_dict = {'a': 1, 'b': 2, 'c': 3}
-        value = key_error(my_dict, 'd')
+        my_dict = {"a": 1, "b": 2, "c": 3}
+        value = key_error(my_dict, "d")
     except KeyError as e:
         print("KeyError:", e)
     try:
@@ -140,13 +143,13 @@ def main():
     except NameError as e:
         print("NameError:", e)
     try:
-        nums = '12345'
+        nums = "12345"
         append_num = 6
-        attribute_error(nums,append_num)
+        attribute_error(nums, append_num)
     except AttributeError as e:
         print("AttributeError:", e)
     try:
-        os_error('somefile.txt')
+        os_error("somefile.txt")
     except OSError as e:
         print("OSError:", e)
     try:
@@ -156,12 +159,11 @@ def main():
         print("ImportError:", e)
     logic_error_nums = [1, 2, 3, 4]
     logic_error_sum = logic_error(logic_error_nums)
-    print(f'Logic Error: the actual sum is {sum(logic_error_nums)} but we got {logic_error_sum}')
-    
+    print(
+        f"Logic Error: the actual sum is {sum(logic_error_nums)}"
+        f"but we got {logic_error_sum}"
+    )
 
-    
 
-
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
