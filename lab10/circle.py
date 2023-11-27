@@ -41,7 +41,7 @@ class Circle:
         if isinstance(self.radius, str):
             raise TypeError
         radius = float(self.radius)
-        area = math.pi * radius ** 2
+        area = 3.14 * radius ** 2
         return float(area)
 
     def __str__(self):

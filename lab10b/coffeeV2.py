@@ -33,3 +33,17 @@ class Coffee:
             self.price += 1.50
         elif adder == "flavor":
             self.price += 0.49
+
+    def __str__(self):
+        print(f"Coffee is {self.name}, it costs {self.price}")
+
+
+def main():
+    coffee1 = Coffee("Dark Coffee", size="L")
+    coffee1.add_on("flavor")
+    coffee1.__str__()
+    coffee2 = Coffee()
+
+
+if __name__ == '__main__':
+    main()
