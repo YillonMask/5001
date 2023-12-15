@@ -1,0 +1,101 @@
+CS5001_5003 Fall 2023 SV
+Lab09
+Gio Ong / Byunghyun Ko / Xinrui Yi - (3 man group)
+
+
+
+Idea 1: Blackjack Game
+
+    • Why are you interested in this topic?
+        ◦ Although we do not encourage people to gamble, blackjack has elements of math and strategy that allows players to flip the odds in their favor.
+        ◦ The game is simple enough to understand in just a few minutes making it a great project idea for beginner programmers. 
+
+    • How hard do you think it will be, and why?
+        ◦ The difficulty level is expected to be fairly challenging for beginners. The most troublesome area would be identifying all the edge cases. 
+        ◦ Since blackjack is dependent on previous events, this means the cards used needs to be excluded from the next game until the decks are reshuffled. 
+        ◦ Another difficult area would be how to visualize our game. Our current idea is to use Turtle, but this takes time and creates giant chunks of code. 
+
+    • Besides the core CS5001 content, what else will you need to learn to complete the project?
+        ◦ Visualizing libraries would be necessary in improving the project but not necessary. We will definitely attempt to do so, but using Turtle would be sufficient in visualizing the game.
+        ◦ Objects could also help the way our project runs 
+
+    • What are the biggest pros and cons?
+        ◦ Pros:
+            ▪ There are multiple rules and regulations that would have to be incorporated	into the game in order to run correctly. 
+            ▪ The project would also require multiple helper functions which makes it easy to work on as a team
+            ▪ Working in a team, we can also practice using GitHub
+            ▪ exploring visualizing tools will give us a good foundation of the different options python has
+            ▪ a lot of potential bugs can arise due to the working separately and having a long project, which give both of us good practicing on debugging
+        ◦ Cons:
+            ▪ communication is extremely important 
+            ▪ a poor initial game plan will set us back instantly 
+
+    • How will you get started?
+        ◦ a written plan with clear step by step processes/functions so that we can each have a guide on how to proceed
+        ◦ this will also allow either of us to pick up a step/function to create because we have established what the function needs to do and the inputs
+
+
+
+
+
+Idea 2: Predicting future stars through combine data (using Machine Learning)
+
+    • Why are you interested in this topic?
+        ◦ the NBA/NFL draft occurs once a year in which teams decide on which future prospect they would want on their team. Using the combine data, we intend to predict who will be a future star based solely on the stats. We understand there are more than just stats that determine the future performance of players, but we want to see if stats are a good measure. 
+
+    • How hard do you think it will be, and why?
+        ◦ the most challenging part would be cleaning the data and choosing the appropriate machine learning algorithm 
+        ◦ we can use multiple algorithms are tune them to determine which of the algorithms is most accurate. 
+
+    • Besides the core CS5001 content, what else will you need to learn to complete the project?
+        ◦ We would have to learn about the different machine learning algorithms and how to use them 
+
+    • What are the biggest pros and cons?
+        ◦ Pros:
+            ▪ machine learning is a very strong tool to understand in this day and age
+            ▪ gives us experience with cleaning datasets and importing large datasets
+            ▪ python is perfect for analyzing large data
+            ▪ data driven conclusions can be visualized very nicely and relatively simply 
+        ◦ Cons:
+            ▪ machine learning algorithms are difficult and there are multiple options to choose from
+            ▪ imbalanced datasets need to be balanced properly which can lead to bad data if not done properly 
+            ▪ cleaning the data will need to be done properly or the conclusions will not be accurate 
+
+    • How will you get started?
+        ◦ finding datasets from the internet 
+        ◦ research the different machine learning algorithms
+        ◦ roadmap the process for cleaning the dataset
+
+
+
+
+
+
+
+Idea 3: Mahjong winning hand
+
+    • Why are you interested in this topic?
+        ◦ Mahjong is a very popular game in East Asian culture. There are many variations of the game which allows for multiple adaptation of the project. Mahjong has certain ‘winning’ hands each determining how much money you win if you are able to win with certain hands. 
+        ◦ The most difficult hand in the version we play is called “13 Orphans.” This is a hand with all the single tiles that do not connect to each other. We have tried to attain this hand but in the few years I have played Mahjong, no one has been able to win with it. 
+        ◦ We want to test just how many games would it take in order for someone to win with said hand. 
+
+    • How hard do you think it will be, and why?
+        ◦ a challenging aspect of this idea would be how to explain the rules and regulations to everyone especially since there are multiple versions of the game. 
+        ◦ another challenge would be what strategy would the other 3 players have? should all 4 players try to get the hand or do they play normally. We can also have them play a certain strategy the entire time to make things simpler. The issue then becomes how much do the other players hinder the chances of getting the 13 Orphans
+
+    • Besides the core CS5001 content, what else will you need to learn to complete the project?
+        ◦ Potentially using objects would be helpful in this project 
+
+    • What are the biggest pros and cons?
+        ◦ Pros:
+            ▪ this project would not require user input therefore edge cases will be easier to discover 
+            ▪ running simulations on python are very quick and we can collect a lot of data 
+            ▪ the project would also be very modular so working in groups will be easy
+        ◦ Cons:
+            ▪ incorporating the game into code will be challenging 
+            ▪ the rules are complicated which can leave a lot of room for errors
+
+    • How will you get started?
+        ◦ Since we have a mahjong set at home, we can easily visualize what we have to do. This would be a great way to get started and determine how others play the game so that we can incorporate it into our code. Since getting 13 orphans requires a certain strategy, we can easily create a flow chart to visualize how the player going for the winning hand will play
+
+
