@@ -13,6 +13,7 @@ from hand import Hand
 from deck import Deck
 from button import Button
 from menu import *
+from circle import Circle
 
 
 # initializing pygame
@@ -93,11 +94,11 @@ def choose_bet():
     """
     menu_effect.play()
     # creating a button for the betting options
-    button_5 = Button("$5", 30, 315, 150, 50)
-    button_10 = Button("$10", 280, 315, 150, 50)
-    button_25 = Button("$25", 530, 315, 150, 50)
-    button_50 = Button("$50", 780, 315, 150, 50)
-    button_100 = Button("$100", 1003, 315, 150, 50)
+    button_5 = Circle("$5", 30, 275, 75)
+    button_10 = Circle("$10", 280, 275, 75)
+    button_25 = Circle("$25", 530, 275, 75)
+    button_50 = Circle("$50", 780, 275, 75)
+    button_100 = Circle("$100", 1003, 275, 75)
     button_reset = Button("Reset", 420, 500, 150, 50)
     button_bet = Button("Bet", 620, 500, 150, 50)
 
@@ -105,9 +106,9 @@ def choose_bet():
     run = True
     while run:
         gameDisplay.blit(scaled_image, [0, 0])
-        pygame.draw.rect(
+        """pygame.draw.rect(
             gameDisplay, black, pygame.Rect(0, 250, display_width, display_height / 4)
-        )
+        )"""
 
         # event handler
         for event in pygame.event.get():
@@ -133,11 +134,11 @@ def choose_bet():
             run = False
 
         # draws the buttons
-        button_5.draw()
-        button_10.draw()
-        button_25.draw()
-        button_50.draw()
-        button_100.draw()
+        button_5.draw_circle()
+        button_10.draw_circle()
+        button_25.draw_circle()
+        button_50.draw_circle()
+        button_100.draw_circle()
         button_reset.draw()
         button_bet.draw()
 

@@ -6,7 +6,6 @@ gameDisplay = pygame.display.set_mode((display_width, display_height))
 
 
 class Button:
-
     def __init__(self, msg, x, y, width, height):
         self.txt = msg
         self.rect = pygame.Rect(x, y, width, height)
@@ -20,9 +19,11 @@ class Button:
 
         surf = font.render(self.txt, True, black)
         rect = surf.get_rect()
-        rect.center = ((self.rect.x + (self.rect.w / 2)), (self.rect.y + (self.rect.h / 2)))
+        rect.center = (
+            (self.rect.x + (self.rect.w / 2)),
+            (self.rect.y + (self.rect.h / 2)),
+        )
         gameDisplay.blit(surf, rect)
-
 
     def check_click(self):
         # get mouse position
