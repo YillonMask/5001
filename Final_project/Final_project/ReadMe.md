@@ -11,8 +11,10 @@ Blackjack, also known as 21, is a popular card game where the goal is to beat th
 - Simple and intuitive Pygame interface
   ![Blackjack Homepage](png/homepage.png "HomePage")
 - Single player gameplay against a dealer AI
+  ![Blackjack MainGame](png/main_game.png "Main Game")
 - Basic Blackjack actions such as Hit, Stand, Double Down.
 - Betting system with a configurable starting balance
+  ![Blackjack betselection](png/bet_slection.png "bet selection")
 
 ## Prerequisites
 
