@@ -15,7 +15,8 @@ Blackjack, also known as 21, is a popular card game where the goal is to beat th
 - Basic Blackjack actions such as Hit, Stand, Double Down.
 - Betting system with a configurable starting balance
   ![Blackjack betselection](png/bet_selection.png "bet selection")
-
+- Great news! I will present the final product as poster in CES 2024 @ Las Vegas!
+  ![CES 2024 poster session](png/ces_presenter.jpg "poster presenter")
 ## Prerequisites
 
 Before you can run the game, make sure you have the following installed:
